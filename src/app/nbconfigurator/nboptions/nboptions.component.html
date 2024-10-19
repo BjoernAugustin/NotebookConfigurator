@@ -1,0 +1,83 @@
+<section>
+
+  <mat-form-field>
+    <mat-label>Format</mat-label>
+    <mat-select>
+      <!-- <mat-option routerLink="/{{product.format}}" (click)="getFormatOfCover(index)" *ngFor="let product of productdata.productlist; let index = index" value="option">
+        <div class="options-field">
+          {{product.format}}
+        </div>
+      </mat-option> -->
+      <mat-option (click)="getFormatOfCover(index)" *ngFor="let product of productdata.productlist; let index = index"
+        value="option">
+        <div class="options-field">
+          {{product.format}}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Einband</mat-label>
+    <mat-select>
+      <mat-option (click)="getColorOfCover(index)" *ngFor="let color of colordata.colorlist; let index = index"
+        value="option">
+        <div class="options-field">
+          <div class="color-field" [ngStyle]="{backgroundColor: color.hexcode}"></div> {{color.name_ger}}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-checkbox class="example-margin" [(ngModel)]="detailsdata.detailOptions.isChecked">Stiftschlaufe</mat-checkbox>
+  
+@if(detailsdata.detailOptions.isChecked) {
+  <mat-form-field>
+    <mat-label>Stiftschlaufe</mat-label>
+    <mat-select>
+      <mat-option (click)="getColorOfPenloop(index)" *ngFor="let color of colordata.colorlist; let index = index"
+        value="option">
+        <div class="options-field">
+          <div class="color-field" [ngStyle]="{backgroundColor: color.hexcode}"></div> {{color.name_ger}}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+}
+  <mat-form-field>
+    <mat-label>Verschlussgummi</mat-label>
+    <mat-select>
+      <mat-option (click)="getColorOfEnclosure(index)" *ngFor="let color of colordata.colorlist; let index = index"
+        value="option">
+        <div class="options-field">
+          <div class="color-field" [ngStyle]="{backgroundColor: color.hexcode}"></div> {{color.name_ger}}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Lesezeichen 1</mat-label>
+    <mat-select>
+      <mat-option (click)="getColorOfPagemarkerOne(index)" *ngFor="let color of colordata.colorlist; let index = index"
+        value="option">
+        <div class="options-field">
+          <div class="color-field" [ngStyle]="{backgroundColor: color.hexcode}"></div> {{color.name_ger}}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Lesezeichen 2</mat-label>
+    <mat-select>
+      <mat-option (click)="getColorOfPagemarkerTwo(index)" *ngFor="let color of colordata.colorlist; let index = index"
+        value="option">
+        <div class="options-field">
+          <div class="color-field" [ngStyle]="{backgroundColor: color.hexcode}"></div> {{color.name_ger}}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</section>

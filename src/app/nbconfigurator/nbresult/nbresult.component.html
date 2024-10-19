@@ -1,0 +1,14 @@
+<section>
+    <!-- in den detailsdata habe ich das A5 Buch direkt angelegt -->
+    @if(detailsdata.detailOptions.selektion == "") {
+    <app-default></app-default>
+    }
+
+
+    <!-- <button (click)="test()"> klick mich</button> -->
+    @if(detailsdata.detailOptions.selektion == "NB5251") {
+    <app-nb5251></app-nb5251>
+    } @else if(detailsdata.detailOptions.selektion == "NB6187") {
+    <app-nb6187></app-nb6187>
+    }
+</section>
