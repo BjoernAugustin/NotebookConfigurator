@@ -1,0 +1,122 @@
+<!-- <div>{{ detailsdata.detailOptions.selektion }}</div>
+@if(productdata.productlist[productdata.indexFormat].selektion == detailsdata.detailOptions.selektion){ -->
+<div class="notebook">
+
+    <section class="nb-back">
+        <div class="nb-back-frame nb-shadow" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode, 
+            'width.mm': productdata.productlist[productdata.indexFormat].width, 
+            'height.mm': productdata.productlist[productdata.indexFormat].height
+            }">
+        </div>
+        <div class="fold-right" [ngStyle]="{
+            'width': '4mm'
+            }"></div>
+        <div class="eb-back eb-shadow" [ngStyle]="{
+                'background-color': colordata.colorlist[colordata.indexColor].hexcode, 
+                'left.mm': productdata.productlist[productdata.indexFormat].ebmargin, 
+                'top.mm': '-1'
+                }">
+        </div>
+        <div class="eb-back eb-shadow" [ngStyle]="{
+                'background-color': colordata.colorlist[colordata.indexColor].hexcode, 
+                'left.mm': productdata.productlist[productdata.indexFormat].ebmargin, 
+                'bottom.mm': '-1'
+                }">
+        </div>
+        <div class="pagemarker nb-shadow" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+            'right': '15mm'
+            }">
+        </div>
+        <div class="pagemarker nb-shadow" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+            'right': '7mm'
+            }">
+            <div class="pm-stripe"></div>
+            <div class="pm-stripe"></div>
+        </div>
+        <div class="bellyband bb-edge-back" [ngStyle]="{
+            'width': 'calc(' + productdata.productlist[productdata.indexFormat].width + 'mm + 1mm)', 
+            'height.mm': productdata.productlist[productdata.indexFormat].bbheight
+            }"
+            [ngClass]="{
+                'bb-top' : productdata.bbIsTopPosition == true,
+                'bb-mid' : productdata.bbIsMidPosition == true, 
+                'bb-low' : productdata.bbIsLowPosition == true
+            }"></div>
+        <div class="penloop" *ngIf="productdata.penloopIsChecked == true" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+            'left': '-12mm'
+            }"></div>
+    </section>
+
+    <section class="nb-spine">
+        <div class="nb-spine-frame nb-shadow" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+            'width.mm': productdata.productlist[productdata.indexFormat].thickness, 
+            'height.mm': productdata.productlist[productdata.indexFormat].height
+            }">
+        </div>
+        <div class="fold-left" [ngStyle]="{
+            'width': '2mm'
+            }"></div>
+        <div class="fold-right" [ngStyle]="{
+            'width': '2mm'
+            }"></div>
+        <div class="bellyband bb-edge-spine" [ngStyle]="{
+            'width': 'calc(' + productdata.productlist[productdata.indexFormat].thickness + 'mm + 1mm)', 
+            'height.mm': productdata.productlist[productdata.indexFormat].bbheight
+            }"
+            [ngClass]="{
+                'bb-top' : productdata.bbIsTopPosition == true,
+                'bb-mid' : productdata.bbIsMidPosition == true, 
+                'bb-low' : productdata.bbIsLowPosition == true
+            }"></div>
+    </section>
+
+    <section class="nb-front">
+        <div class="nb-front-frame nb-shadow" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode, 
+            'width.mm': productdata.productlist[productdata.indexFormat].width, 
+            'height.mm': productdata.productlist[productdata.indexFormat].height
+            }">
+        </div>
+        <div class="fold-left" [ngStyle]="{
+            'width': '4mm'
+            }"></div>
+        <div class="eb-front eb-shadow" [ngStyle]="{
+                'background-color': colordata.colorlist[colordata.indexColor].hexcode, 
+                'height': 'calc(' + productdata.productlist[productdata.indexFormat].height + 'mm + 2mm)', 
+                'right.mm': productdata.productlist[productdata.indexFormat].ebmargin
+                }">
+        </div>
+        <div class="pagemarker nb-shadow" [ngStyle]="{
+                'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+                'left': '7mm'
+                }">
+            <div class="pm-stripe"></div>
+            <div class="pm-stripe"></div>
+        </div>
+        <div class="pagemarker nb-shadow" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+            'left': '15mm'
+            }">
+        </div>
+        <div class="bellyband bb-edge-front" [ngStyle]="{
+            'width': 'calc(' + productdata.productlist[productdata.indexFormat].width + 'mm + 1mm)', 
+            'height.mm': productdata.productlist[productdata.indexFormat].bbheight
+            }"
+            [ngClass]="{
+                'bb-top' : productdata.bbIsTopPosition == true,
+                'bb-mid' : productdata.bbIsMidPosition == true, 
+                'bb-low' : productdata.bbIsLowPosition == true
+            }"></div>
+
+        <div class="penloop" *ngIf="productdata.penloopIsChecked == true" [ngStyle]="{
+            'background-color': colordata.colorlist[colordata.indexColor].hexcode,
+            'right': '-12mm'
+            }"></div>
+    </section>
+
+</div>

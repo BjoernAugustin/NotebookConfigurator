@@ -1,0 +1,6 @@
+Verschlussgummi und Lesezeichen wie Penloop per Checkbox. 
+Wenn false, dann Buchfarbe, sonst individuell 
+(Tauschen zu andere Farbe?)
+
+nbvisual wird zum MainScreen. Buchformat, 
+VG und PM zund PL Position/Größe in productdata definieren!

@@ -1,0 +1,30 @@
+.main-screen {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    background-color: lightgrey;
+    position: relative;
+}
+
+.nav-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.nav-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.visual-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+}

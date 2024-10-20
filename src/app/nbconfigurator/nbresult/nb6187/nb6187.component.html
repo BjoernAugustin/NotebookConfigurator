@@ -1,0 +1,16 @@
+<div class="notebookA6fb">
+
+    <app-pagemarker></app-pagemarker>
+
+    @if(detailsdata.detailOptions.isChecked){
+        <app-penloop></app-penloop>
+        }
+
+    <div class="cover" [ngStyle]="{backgroundColor: detailsdata.detailOptions.coverColor}">
+        <div class="fold"></div>
+    </div>
+    
+    <app-enclosure></app-enclosure>
+    
+
+</div>

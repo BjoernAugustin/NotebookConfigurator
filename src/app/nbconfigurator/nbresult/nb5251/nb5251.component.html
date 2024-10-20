@@ -1,0 +1,44 @@
+<div class="nbContainer">
+
+    <app-pagemarker></app-pagemarker>
+    <div class="coverContainer">
+
+        <div class="notebookA5hc">
+            <div class="coverBack" [ngStyle]="{backgroundColor: detailsdata.detailOptions.coverColor}">
+                <div class="foldRight"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="coverSpine" [ngStyle]="{backgroundColor: detailsdata.detailOptions.coverColor}">
+
+            </div>
+        </div>
+
+        <div class="notebookA5hc">
+            <div class="coverFront" [ngStyle]="{backgroundColor: detailsdata.detailOptions.coverColor}">
+                <div class="foldLeft"></div>
+            </div>
+        </div>
+
+    </div>
+    <app-enclosure></app-enclosure>
+
+</div>
+
+
+<!-- <div class="notebookA5hc">
+
+    <app-pagemarker></app-pagemarker>
+
+    @if(detailsdata.detailOptions.isChecked){
+        <app-penloop></app-penloop>
+        }
+
+    <div class="cover" [ngStyle]="{backgroundColor: detailsdata.detailOptions.coverColor}">
+        <div class="fold"></div>
+    </div>
+    
+    <app-enclosure></app-enclosure>
+    
+</div> -->

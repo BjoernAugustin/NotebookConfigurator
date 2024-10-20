@@ -1,0 +1,229 @@
+
+$smallShadow: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+$largeShadow: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+$pm1TopShadow: inset 0 20px 12px -20px rgba(0,0,0,0.8);
+$pm2TopShadow: inset 0 20px 5px -20px rgba(0,0,0,0.8);
+$border: 1px solid rgba(0, 0, 0, 0.7);
+$penloopLeftShadow: inset 20px 0px 12px -20px rgba(0,0,0,0.3);
+$widthEnclosure: 6mm;
+$marginEnclosureA5: 25mm;
+$marginEnclosureA6: 20mm;
+
+section {
+    background-color: whitesmoke;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: $border;
+    border-radius: 2px 16px 16px 2px;
+    filter: $largeShadow;
+    position: absolute;
+    top: 0;
+}
+
+.coverFront {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: $border;
+    border-radius: 2px 16px 16px 2px;
+    filter: $largeShadow;
+}
+
+.coverBack {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: $border;
+    border-radius: 16px 2px 2px 16px;
+    filter: $largeShadow;
+}
+
+.coverSpine {
+    width: 18mm;
+    height: 210mm;
+    background-color: white;
+    border: $border;
+    border-radius: 2px 2px 2px 2px;
+    filter: $largeShadow;
+    margin: 0px 32px 0px 32px;
+    box-shadow: inset 20px 0px 12px -20px rgba(0,0,0,0.3),
+    inset -20px 0px 12px -20px rgba(0,0,0,0.3);
+}
+
+.fold {
+    width: 4mm;
+    height: 100%;
+    position: relative;
+    top: 0mm;
+    right: 0mm;
+    box-shadow: inset -12px 0px 20px -20px rgba(0,0,0,0.5);
+}
+
+.foldLeft {
+    width: 4mm;
+    height: 100%;
+    position: relative;
+    top: 0mm;
+    left: 0mm;
+    box-shadow: inset -12px 0px 20px -20px rgba(0,0,0,0.5);
+}
+
+.foldRight {
+    width: 4mm;
+    height: 100%;
+    position: relative;
+    top: 0mm;
+    right: calc(-100% + 4mm);
+    rotate: 180deg;
+    box-shadow: inset -12px 0px 20px -20px rgba(0,0,0,0.5);
+}
+
+.nbContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coverContainer {
+    display: flex;
+}
+
+.notebookA5hc {
+    width: 145mm;
+    height: 210mm;
+    position: relative;
+}
+
+.penloop {
+    width: 13mm;
+    height: 20mm;
+    background-color: white;
+    border: $border;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    right: calc(-100% - 1.5px);
+    box-shadow: $penloopLeftShadow;
+    background:
+    linear-gradient(90deg, transparent 35%, rgba(0, 0, 0, 0.10) 65%, transparent 95%) bottom;
+    position: absolute;
+    top: 50%;
+    right: -13mm;
+    transform: translateY(-50%);
+}
+
+.enclosureA5hc {
+    width: $widthEnclosure;
+    height: 211mm;
+    background-color: white;
+    border: $border;
+    position: relative;
+    top: -231mm;
+    right: -120mm;
+    border-radius: 2px;
+    filter: $smallShadow;
+    position: absolute;
+    top: -0.5mm;
+    right: calc($marginEnclosureA5 - $widthEnclosure);
+}
+
+.pagemarker {
+    display: flex;
+    justify-content: space-between;
+    width: 14mm;
+}
+
+.pmContainer {
+    display: flex;
+    gap: 190px;
+    position: relative;
+    top: 225mm;
+}
+
+.pagemarker1A5hc {
+    width: 6mm;
+    height: 15mm;
+    background-color: white;
+    border: $border;
+    border-radius: 0 0 2px 2px;
+    filter: $smallShadow;
+    box-shadow: $pm1TopShadow;
+    display: flex;
+    justify-content: space-evenly;
+    /* position: absolute;
+    bottom: -15mm;
+    left: 5mm; */
+}
+
+.pagemarker2A5hc {
+    width: 6mm;
+    height: 15mm;
+    background-color: white;
+    border: $border;
+    border-radius: 0 0 2px 2px;
+    filter: $smallShadow;
+    box-shadow: $pm2TopShadow;
+    /* position: absolute;
+    bottom: -15mm;
+    left: 13mm; */
+}
+
+.pmStripe {
+    width: 1mm;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+}
+
+#notebookA6hc {
+    width: 90mm;
+    height: 150mm;
+    position: relative;
+}
+
+.enclosureA6hc {
+    width: $widthEnclosure;
+    height: 151mm;
+    background-color: white;
+    border: $border;
+    border-radius: 2px;
+    filter: $smallShadow;
+    position: absolute;
+    top: -0.5mm;
+    right: calc($marginEnclosureA6 - $widthEnclosure);
+}
+
+.pagemarker1A6hc {
+    width: 6mm;
+    height: 15mm;
+    background-color: white;
+    border: $border;
+    border-radius: 0 0 2px 2px;
+    filter: $smallShadow;
+    box-shadow: $pm1TopShadow;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: -15mm;
+    left: 5mm;
+}
+
+.pagemarker2A6hc {
+    width: 6mm;
+    height: 15mm;
+    background-color: white;
+    border: $border;
+    border-radius: 0 0 2px 2px;
+    filter: $smallShadow;
+    box-shadow: $pm2TopShadow;
+    position: absolute;
+    bottom: -15mm;
+    left: 13mm;
+}

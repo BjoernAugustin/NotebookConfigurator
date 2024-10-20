@@ -1,0 +1,15 @@
+<div class="main-screen">
+    <div class="nav-left">
+        <app-nboptions></app-nboptions>
+    </div>
+    <div class="visual-area">
+        @if(detailsdata.detailOptions.selektion == "") {
+            <app-default></app-default>
+            } @else {
+            <app-nbvisual></app-nbvisual>
+            }
+    </div>
+    <div class="nav-right">
+        <app-logooptions></app-logooptions>
+    </div>
+</div>
